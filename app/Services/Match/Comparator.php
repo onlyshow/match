@@ -18,8 +18,8 @@ class Comparator
 
     private function getScale(OrderKey $o1, OrderKey $o2)
     {
-        [, $decimal1] = explode('.', $o1);
-        [, $decimal2] = explode('.', $o2);
+        [, $decimal1] = explode('.', $o1->price);
+        [, $decimal2] = explode('.', $o2->price);
         $scale1 = strlen($decimal1);
         $scale2 = strlen($decimal2);
         return max(strlen($scale1), strlen($scale2));
